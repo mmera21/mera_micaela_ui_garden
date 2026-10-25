@@ -15,8 +15,8 @@ export default meta;
 type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {
-  args: { text: 'Nombre', backgroundColor: '#e6f0ff' },
+  args: { text: 'Name', backgroundColor: '#e6f0ff' },
 };
 export const Disabled: Story = {
-  args: { text: 'Nombre', backgroundColor: '#e6f0ff', disabled: true },
+  args: { text: 'Name', backgroundColor: '#e6f0ff', disabled: true },
 };

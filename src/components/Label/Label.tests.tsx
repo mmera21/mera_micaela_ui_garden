@@ -3,13 +3,13 @@ import Label from './Label';
 
 describe('Label', () => {
   test('is visible', () => {
-    render(<Label text="Nombre" />);
-    expect(screen.getByText('Nombre')).toBeVisible();
+    render(<Label text="Name" />);
+    expect(screen.getByText('Name')).toBeVisible();
   });
 
   test('changes background color when disabled', () => {
-    render(<Label text="Deshabilitado" disabled />);
-    expect(screen.getByText('Deshabilitado')).toHaveStyleRule(
+    render(<Label text="Disabled" disabled />);
+    expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
       '#cccccc'
     );

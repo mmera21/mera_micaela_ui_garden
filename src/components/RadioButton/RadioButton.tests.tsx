@@ -3,13 +3,13 @@ import RadioButton from './RadioButton';
 
 describe('RadioButton', () => {
   test('is visible', () => {
-    render(<RadioButton label="Opción A" />);
-    expect(screen.getByLabelText('Opción A')).toBeVisible();
+    render(<RadioButton label="Option A" />);
+    expect(screen.getByLabelText('Option A')).toBeVisible();
   });
 
   test('changes background color when disabled', () => {
-    render(<RadioButton label="Deshabilitado" disabled />);
-    expect(screen.getByText('Deshabilitado')).toHaveStyleRule(
+    render(<RadioButton label="Disabled" disabled />);
+    expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
       '#cccccc'
     );

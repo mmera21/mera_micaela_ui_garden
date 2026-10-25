@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Dropdown from './Dropdown';
 
 const options = [
-  { value: 'one', label: 'Opción 1' },
-  { value: 'two', label: 'Opción 2' },
-  { value: 'three', label: 'Opción 3' },
+  { value: 'one', label: 'Option 1' },
+  { value: 'two', label: 'Option 2' },
+  { value: 'three', label: 'Option 3' },
 ];
 
 const meta: Meta<typeof Dropdown> = {
@@ -21,8 +21,8 @@ export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
 export const Default: Story = {
-  args: { options, label: 'Selecciona', backgroundColor: '#ffffff' },
+  args: { options, label: 'Select', backgroundColor: '#ffffff' },
 };
 export const Disabled: Story = {
-  args: { options, label: 'Selecciona', backgroundColor: '#ffffff', disabled: true },
+  args: { options, label: 'Select', backgroundColor: '#ffffff', disabled: true },
 };

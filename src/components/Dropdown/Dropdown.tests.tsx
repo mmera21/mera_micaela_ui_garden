@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import Dropdown from './Dropdown';
 
 const options = [
-  { value: 'one', label: 'Opción 1' },
-  { value: 'two', label: 'Opción 2' },
+  { value: 'one', label: 'Option 1' },
+  { value: 'two', label: 'Option 2' },
 ];
 
 describe('Dropdown', () => {

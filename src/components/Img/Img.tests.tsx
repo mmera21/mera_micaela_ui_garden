@@ -5,13 +5,13 @@ const src = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
 
 describe('Img', () => {
   test('is visible', () => {
-    render(<Img src={src} alt="Ejemplo" />);
-    expect(screen.getByAltText('Ejemplo')).toBeVisible();
+    render(<Img src={src} alt="Example" />);
+    expect(screen.getByAltText('Example')).toBeVisible();
   });
 
   test('changes background color when disabled', () => {
-    render(<Img src={src} alt="Deshabilitada" disabled />);
-    expect(screen.getByAltText('Deshabilitada')).toHaveStyleRule(
+    render(<Img src={src} alt="Disabled" disabled />);
+    expect(screen.getByAltText('Disabled')).toHaveStyleRule(
       'background-color',
       '#cccccc'
     );

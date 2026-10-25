@@ -30,7 +30,7 @@ export const Default: Story = {
   args: {
     src: sampleSrc,
     title: 'Welcome',
-    subtitle: 'Library components',
+    subtitle: 'My component library',
     backgroundColor: '#4f8ef7',
   },
 };
@@ -38,7 +38,7 @@ export const Disabled: Story = {
   args: {
     src: sampleSrc,
     title: 'Welcome',
-    subtitle: 'Library components',
+    subtitle: 'My component library',
     backgroundColor: '#4f8ef7',
     disabled: true,
   },

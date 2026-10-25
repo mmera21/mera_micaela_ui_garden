@@ -17,15 +17,15 @@ type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
   args: {
-    title: 'Título de la tarjeta',
-    description: 'Esta es una descripción de ejemplo.',
+    title: 'Card title',
+    description: 'This is an example description.',
     backgroundColor: '#ffffff',
   },
 };
 export const Disabled: Story = {
   args: {
-    title: 'Título de la tarjeta',
-    description: 'Esta es una descripción de ejemplo.',
+    title: 'Card title',
+    description: 'This is an example description.',
     backgroundColor: '#ffffff',
     disabled: true,
   },

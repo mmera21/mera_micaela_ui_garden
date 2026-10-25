@@ -25,12 +25,12 @@ export default meta;
 type Story = StoryObj<typeof Img>;
 
 export const Default: Story = {
-  args: { src: sampleSrc, alt: 'Imagen de ejemplo', backgroundColor: '#e6f0ff' },
+  args: { src: sampleSrc, alt: 'Example image', backgroundColor: '#e6f0ff' },
 };
 export const Disabled: Story = {
   args: {
     src: sampleSrc,
-    alt: 'Imagen deshabilitada',
+    alt: 'Disabled image',
     backgroundColor: '#e6f0ff',
     disabled: true,
   },

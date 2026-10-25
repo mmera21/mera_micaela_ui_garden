@@ -3,13 +3,13 @@ import Text from './Text';
 
 describe('Text', () => {
   test('is visible', () => {
-    render(<Text text="Hola mundo" />);
-    expect(screen.getByText('Hola mundo')).toBeVisible();
+    render(<Text text="Hello world" />);
+    expect(screen.getByText('Hello world')).toBeVisible();
   });
 
   test('changes background color when disabled', () => {
-    render(<Text text="Deshabilitado" disabled />);
-    expect(screen.getByText('Deshabilitado')).toHaveStyleRule(
+    render(<Text text="Disabled" disabled />);
+    expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
       '#cccccc'
     );
