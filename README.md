@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+# Assignment 12: Web Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A UI component library built with **React**, **TypeScript**, **styled-components** and **Storybook**, served as a production build through **Docker** on `localhost:8083`.
 
-## Available Scripts
+- **GitHub repo:** https://github.com/mmera21/mera_micaela_ui_garden
+- **Docker image:** `mera_micaela_ui_garden`
+- **Docker container:** `mera_micaela_coding_assignment12`
+- **Docker working dir:** `/mera_micaela_ui_garden`
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+Button, Label, Text, Table, TableHeader, TableRow, TableCell, TableFooter, Dropdown, RadioButton, Img, HeroImage, Card.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Each component folder (`src/components/<Name>/`) contains:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+<Name>.tsx
+<Name>.stories.tsx
+<Name>.types.tsx
+<Name>.tests.tsx
+index.ts
+```
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 22 LTS
+- npm
+- Git
+- Docker Desktop (running)
 
-### `npm run build`
+## 1. Project setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/mmera21/mera_micaela_ui_garden.git
+cd mera_micaela_ui_garden
+npm install --legacy-peer-deps
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 2. Run the app locally (development)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Open http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 3. Run Storybook
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run storybook
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Open http://localhost:6006. Each component has a **Default** and a **Disabled** story. Use the **Controls** panel to change text and background color, and to toggle `disabled`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 4. Run the tests
 
-## Learn More
+```bash
+npm test -- --watchAll=false
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Expected result: `Tests: 26 passed` (2 tests for each of the 13 components):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. The component is visible.
+2. The background color changes when the component is `disabled`.
+
+## 5. Docker build and deployment
+
+Make sure Docker Desktop is running, then from the project root:
+
+```bash
+docker build -t mera_micaela_ui_garden .
+docker run -d -p 8083:8083 --name mera_micaela_coding_assignment12 mera_micaela_ui_garden
+```
+
+Open http://localhost:8083.
+
+Useful commands:
+
+```bash
+docker ps
+docker logs mera_micaela_coding_assignment12
+docker rm -f mera_micaela_coding_assignment12
+```
+
+If the container name is already in use, run `docker rm -f mera_micaela_coding_assignment12` and then the `docker run` command again.
+
+## 6. Verification of Assignment 12 requirements
+
+- [x] Created with Create React App (TypeScript) and Storybook
+- [x] All 13 required components exist
+- [x] Each component folder has `.tsx`, `.stories.tsx`, `.types.tsx`, `.tests.tsx` and `index.ts`
+- [x] Styling done with styled-components
+- [x] All components are responsive (`@media` queries)
+- [x] Storybook Controls modify text and background color
+- [x] Every component has a default and a disabled state
+- [x] Disabled components turn grey and show a `not-allowed` cursor
+- [x] Every component has at least 2 tests (visible, background color when disabled)
+- [x] Dockerfile hosts the production build in working dir `/mera_micaela_ui_garden`
+- [x] Container named `mera_micaela_coding_assignment12`
+- [x] App available at http://localhost:8083
