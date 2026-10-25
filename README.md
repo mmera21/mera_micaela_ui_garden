@@ -42,7 +42,7 @@ npm install --legacy-peer-deps
 npm start
 ```
 
-Open http://localhost:3000.
+Open http://localhost:8083 (127.0.0.1:8083).
 
 ## 3. Run Storybook
 
@@ -72,7 +72,7 @@ docker build -t mera_micaela_ui_garden .
 docker run -d -p 8083:8083 --name mera_micaela_coding_assignment12 mera_micaela_ui_garden
 ```
 
-Open http://localhost:8083.
+Open http://localhost:8083 (127.0.0.1:8083).
 
 Useful commands:
 
@@ -98,3 +98,14 @@ If the container name is already in use, run `docker rm -f mera_micaela_coding_a
 - [x] Dockerfile hosts the production build in working dir `/mera_micaela_ui_garden`
 - [x] Container named `mera_micaela_coding_assignment12`
 - [x] App available at http://localhost:8083
+
+
+
+Prueba para Miss Maninder 
+
+cd C:\dev
+git clone https://github.com/mmera21/mera_micaela_ui_garden.git prueba_final
+cd prueba_final
+docker rm -f mera_micaela_coding_assignment12
+docker build -t mera_micaela_ui_garden .
+docker run -d -p 8083:8083 --name mera_micaela_coding_assignment12 mera_micaela_ui_garden
