@@ -40,7 +40,9 @@ const RadioButton: React.FC<RadioButtonProps> = ({
       value={value}
       disabled={disabled}
       checked={checked}
-      onChange={(e) => onChange && onChange(e.target.value)}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+        onChange && onChange(e.target.value)
+      }
     />
     {label}
   </Wrapper>

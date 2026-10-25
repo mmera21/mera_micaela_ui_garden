@@ -29,7 +29,9 @@ const Dropdown: React.FC<DropdownProps> = ({
     aria-label={label}
     $bg={backgroundColor}
     disabled={disabled}
-    onChange={(e) => onChange && onChange(e.target.value)}
+    onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+      onChange && onChange(e.target.value)
+    }
   >
     {options.map((o) => (
       <option key={o.value} value={o.value}>
